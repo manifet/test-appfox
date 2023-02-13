@@ -83,9 +83,9 @@ task("server", () => {
 task("watch", () => {
     watch(`${SRC_PATH}/images/**/*`, series("copy:images")).on("change", reload);
     watch(`${SRC_PATH}/fonts/**/*`, series("copy:fonts")).on("change", reload);
-    watch(`${SRC_PATH}/pug/**/*.pug`, series("html")).on("change", reload);
+    watch(`${SRC_PATH}/pages/**/*.pug`, series("html")).on("change", reload);
     watch(`${SRC_PATH}/scripts/**/*.js`, series("scripts")).on("change", reload);
-    watch(`${SRC_PATH}/sass/**/*.scss`, series("styles")).on("change", reload);
+    watch(`${SRC_PATH}/styles/**/*.scss`, series("styles")).on("change", reload);
 });
 
 task(
