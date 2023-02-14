@@ -1,0 +1,45 @@
+.header {
+  background: transparent;
+  z-index: 10000;
+
+  &__container {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: rem(10px) 0;
+  }
+
+  &__icon {
+    width: rem(42px);
+    height: rem(42px);
+    background: white;
+    border-radius: 100%;
+    display: flex;
+  }
+
+  &__wrap {
+    display: flex;
+    align-items: center;
+  }
+
+
+  &__btn {
+    background: white;
+    color: $mainOrange;
+
+    &:not(:last-child) {
+      margin-right: rem(10px);
+    }
+
+    &-wrap {
+      margin-left: rem(98px);
+      display: flex;
+      align-items: center;
+    }
+
+    &-icon {
+      fill: $mainOrange;
+      margin-right: rem(10px);
+    }
+  }
+}

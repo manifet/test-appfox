@@ -46,6 +46,7 @@ task("html", () => {
 
 task('scripts', () => {
     return src(`${SRC_PATH}/scripts/*.js`)
+        .pipe(gulpif(ENV_DEV, sourcemaps.init()))
         .pipe(concat("main.js"))
         .pipe(
             gulpif(
@@ -56,15 +57,17 @@ task('scripts', () => {
             )
         )
         .pipe(gulpif(ENV_PROD, uglify()))
+        .pipe(gulpif(ENV_DEV, sourcemaps.write()))
         .pipe(dest(DIST_PATH))
         .pipe(reload({stream: true}));
 });
 
 task("styles", () => {
-    return src(`${SRC_PATH}/styles/main.scss`)
+    return src(`${SRC_PATH}/styles/index.scss`)
         .pipe(gulpif(ENV_DEV, sourcemaps.init()))
         .pipe(sassGlob())
         .pipe(sass().on("error", sass.logError))
+        .pipe(concat("main.css"))
         .pipe(gulpif(ENV_PROD, gcmq()))
         .pipe(gulpif(ENV_PROD, cleanCSS()))
         .pipe(gulpif(ENV_PROD, autoprefixer()))

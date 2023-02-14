@@ -1,0 +1,26 @@
+.contacts {
+  display: flex;
+
+  &-item {
+    &:not(:last-child) {
+      margin-right: rem(30px);
+    }
+  }
+
+  &-link {
+    display: flex;
+    align-items: center;
+    font-family: $mainFont;
+    font-style: normal;
+    font-weight: 700;
+    font-size: rem(16px);
+    line-height: 170%;
+    color: #FFFFFF;
+  }
+  &-text{
+    margin-left: rem(5px);
+  }
+  &-icon{
+    fill: white;
+  }
+}
