@@ -1,6 +1,4 @@
 .welcome {
-  padding-top: rem(62px);
-
   &__container {
     position: relative;
     align-items: center;
@@ -73,9 +71,14 @@
     justify-content: center;
     cursor: pointer;
     z-index: 10;
+    transition: 0.3s;
 
     &-icon {
       fill: white;
+    }
+
+    &:hover {
+      transform: scale(1.1);
     }
   }
 }
