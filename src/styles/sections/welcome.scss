@@ -23,12 +23,10 @@
     height: 100%;
     z-index: 1;
     top: 0;
-
-    &-img {
-      width: 100%;
-      height: 100%;
-      object-fit: contain;
-    }
+    background-image: url("../../images/backgrounds/balls_welcome.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
   }
 
   &__ball {
