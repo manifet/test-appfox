@@ -31,6 +31,10 @@
 
   &__ball {
     position: absolute;
+    background-image: url("../../images/backgrounds/blured-ball.png");
+    background-size: contain;
+    background-repeat: no-repeat no-repeat;
+    background-position: center center;
     bottom: 21%;
     right: 25.7%;
     z-index: 100;

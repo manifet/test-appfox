@@ -112,5 +112,6 @@ section {
 /* Sections:
   ========================================================================== */
 @import "./sections/welcome";
-@import "./sections/download";
-@import "./sections/mobile-app";
+@import "sections/app-download";
+@import "sections/app-restaurants";
+@import "sections/app-platform";
