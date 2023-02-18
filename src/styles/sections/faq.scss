@@ -1,0 +1,102 @@
+.faq {
+  z-index: 10000;
+  padding: rem(125px) 0 rem(70px);
+
+  &__container {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: rem(540px);
+    flex: 1 0 auto;
+  }
+
+  &__heading {
+    font-family: 'Ubuntu', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: rem(32px);
+    line-height: 120%;
+    text-transform: uppercase;
+    color: #000000;
+    margin-bottom: rem(20px);
+    max-width: rem(445px);
+
+    &--orange {
+      color: $textOrange;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  &__item {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    &:not(:last-child) {
+      margin-bottom: rem(5px);
+    }
+
+    &-wrap {
+      background: #FFFFFF;
+      box-shadow: rem(4px) rem(4px) rem(30px) rgba(0, 0, 0, 0.1);
+      border-radius: rem(5px);
+      display: flex;
+      justify-content: space-between;
+      cursor: pointer;
+      align-items: center;
+    }
+
+    &-title {
+      font-family: $mainFont;
+      font-style: normal;
+      font-weight: 700;
+      font-size: rem(16px);
+      line-height: 170%;
+      color: #4E5C66;
+      right: 2rem;
+    }
+
+    &-answer {
+      margin-top: rem(10px);
+      font-family: 'Roboto', sans-serif;
+      font-style: normal;
+      font-weight: 400;
+      font-size: rem(14px);
+      line-height: 175%;
+      color: #4E5C66;
+      visibility: hidden;
+      opacity: 0;
+height: 0;
+      .active & {
+        transition: 1s;
+        height: auto;
+        visibility: visible;
+        opacity: 1;
+      }
+    }
+
+    &-open {
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 5px 5px 0 5px;
+      border-color: $mainOrange transparent transparent transparent;
+      transition: 0.3s;
+
+      .active & {
+        transform: rotate(180deg);
+      }
+    }
+  }
+}

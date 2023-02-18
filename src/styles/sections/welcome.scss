@@ -23,7 +23,7 @@
     height: 100%;
     z-index: 1;
     top: 0;
-    background-image: url("../../images/backgrounds/balls_welcome.png");
+    background-image: url("./images/backgrounds/balls_welcome.png");
     background-repeat: no-repeat;
     background-position: center center;
     background-size: contain;
@@ -31,7 +31,7 @@
 
   &__ball {
     position: absolute;
-    background-image: url("../../images/backgrounds/blured-ball.png");
+    background-image: url("./images/backgrounds/blured-ball.png");
     background-size: contain;
     background-repeat: no-repeat no-repeat;
     background-position: center center;
@@ -65,7 +65,7 @@
   }
 
   &__next {
-    background: url("../../images/backgrounds/next-btn.png") center center;
+    background: url("./images/backgrounds/next-btn.png") center center;
     width: rem(93px);
     height: rem(95px);
     display: flex;
