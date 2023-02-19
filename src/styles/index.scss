@@ -9,6 +9,7 @@
   ========================================================================== */
 html {
   font-size: $mainFontSize;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -111,10 +112,11 @@ section {
 @import "blocks/footer";
 /* Sections:
   ========================================================================== */
-@import "./sections/welcome";
+@import "sections/welcome";
 @import "sections/app-download";
 @import "sections/app-restaurants";
 @import "sections/app-delivery";
 @import "sections/app-platform";
 @import "sections/faq";
+@import "sections/reviews";
 
