@@ -1,0 +1,1 @@
+"use strict";var faqItems=document.querySelectorAll(".faq__item");faqItems.forEach(function(a){a.addEventListener("click",function(){var t=a.classList.contains("active");faqItems.forEach(function(t){t.classList.remove("active")}),t||a.classList.add("active")})});
