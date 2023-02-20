@@ -16,7 +16,7 @@ const babel = require("gulp-babel");
 const uglify = require("gulp-uglify");
 
 const reload = browserSync.reload;
-sass.compiler = require("node-sass");
+sass.compiler = require("sass");
 
 const ENV_DEV = NODE_ENV === "dev";
 const ENV_PROD = NODE_ENV === "prod";
@@ -63,7 +63,7 @@ task('scripts', () => {
 });
 
 task("styles", () => {
-    return src(`${SRC_PATH}/styles/index.scss`)
+    return src(`${SRC_PATH}/styles/styles.scss`)
         .pipe(gulpif(ENV_DEV, sourcemaps.init()))
         .pipe(sassGlob())
         .pipe(sass().on("error", sass.logError))

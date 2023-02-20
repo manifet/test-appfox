@@ -1,13 +1,7 @@
-ul(class="socials")
-    li(class="socials__item")
-        a(class="socials__item-link" href="./")
-            svg(class="socials__item-icon" width="24" height="24" viewBox="0 0 24 24")
-                use(xlink:href="./images/sprites.svg#instagram")
-    li(class="socials__item")
-        a(class="socials__item-link" href="./")
-            svg(class="socials__item-icon" width="24" height="24" viewBox="0 0 24 24")
-                use(xlink:href="./images/sprites.svg#vk")
-    li(class="socials__item")
-        a(class="socials__item-link" href="./")
-            svg(class="socials__item-icon" width="24" height="24" viewBox="0 0 24 24")
-                use(xlink:href="./images/sprites.svg#facebook")
+- var itemsList = ["instagram","vk","facebook"]
+ul.socials
+    each value in itemsList
+        li.socials__item
+            a(class="socials__item-link" href="./")
+                svg(class="socials__item-icon" width="24" height="24" viewBox="0 0 24 24")
+                    use(href="./images/sprites.svg#" + value)

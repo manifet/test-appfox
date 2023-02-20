@@ -1,3 +1,5 @@
+@use "../config" as *;
+
 .reviews {
   height: rem(562px);
   position: relative;
@@ -68,13 +70,13 @@
   }
 
   &__heading {
-    font-family: 'Ubuntu', sans-serif;
+    font-family: $headingFont;
     font-style: normal;
     font-weight: 700;
     font-size: rem(32px);
     line-height: 120%;
     text-transform: uppercase;
-    color: white;
+    color: #FFFFFF;
     margin-bottom: rem(30px);
     max-width: rem(445px);
 
@@ -87,9 +89,9 @@
     font-family: $mainFont;
     font-style: normal;
     font-weight: 400;
-    font-size: rem(14px);
-    line-height: 150%;
-    color: #FFFFFF;
+    font-size: $mainFontSize;
+    line-height: $mainLineHeight;
+    color: $mainWhite;
     margin-bottom: rem(20px);
     text-align: start;
   }
@@ -97,9 +99,10 @@
   &__img {
     width: 100%;
     object-fit: contain;
+    height: 100%;
 
     &-wrap {
-      flex: 1 0 auto;
+      flex: 1 1 auto;
       margin-right: rem(65px);
       max-width: rem(479px);
       width: 100%;
@@ -127,18 +130,19 @@
       font-style: italic;
       font-weight: 400;
       font-size: rem(16px);
-      line-height: 150%;
-      color: #FFFFFF;
+      line-height: $mainLineHeight;
+      color: $mainWhite;
       margin-bottom: rem(10px);
     }
-    &-author{
+
+    &-author {
       font-family: $mainFont;
       font-style: normal;
       font-weight: 700;
-      font-size: rem(14px);
-      line-height: 150%;
+      font-size: $mainFontSize;
+      line-height: $mainLineHeight;
       text-align: right;
-      color: #FFFFFF;
+      color: $mainWhite;
       width: 100%;
     }
   }

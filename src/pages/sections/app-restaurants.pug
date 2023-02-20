@@ -1,21 +1,22 @@
-section(class="app-restaurants")
-    div(class="app-restaurants__balls")
-    div(class="app-restaurants__background")
-        div(class="app-restaurants__background-mask")
-    div(class="app-restaurants__clip-wrap")
-        div(class="app-restaurants__container container")
-            div(class="app-restaurants__wrap")
-                h2(class="app-restaurants__heading") <span class="app-restaurants__heading--orange">Ваши </span>ЛЮБИМЫЕ &#128241; РЕСТОРАНЫ онлайн
-                div(class="app-restaurants__text") Скачивайте приложение и создавайте свое виртуальное кафе  с электронным меню, доставкой и возможностью предзаказа Скачивайте приложение и создавайте свое виртуальное кафе  с электронным меню, доставкой и возможностью предзаказа
-                ul(class="app-restaurants__features")
-                    li(class="app-restaurants__features-item")
-                        span(class="app-restaurants__features-numbers") 1740 +
-                        span(class="app-restaurants__features-title") Скачиваний
-                    li(class="app-restaurants__features-item")
-                        span(class="app-restaurants__features-numbers") 12 +
-                        span(class="app-restaurants__features-title") Ресторанов
-                    li(class="app-restaurants__features-item")
-                        span(class="app-restaurants__features-numbers") ДО 90%
-                        span(class="app-restaurants__features-title") Cкидки
-            div(class="app-restaurants__img-wrap")
+mixin listItem(numbers, title)
+    li.app-restaurants__features-item
+        span.app-restaurants__features-numbers !{numbers}
+        span.app-restaurants__features-title !{title}
+section.app-restaurants
+    div.app-restaurants__balls
+    div.app-restaurants__background
+        div.app-restaurants__background-mask
+    div.app-restaurants__clip-wrap
+        div.app-restaurants__container.container
+            div.app-restaurants__wrap
+                h2.app-restaurants__heading
+                    span.app-restaurants__heading--orange Ваши
+                    |
+                    |  ЛЮБИМЫЕ &#128241; РЕСТОРАНЫ онлайн
+                div.app-restaurants__text Скачивайте приложение и создавайте свое виртуальное кафе  с электронным меню, доставкой и возможностью предзаказа Скачивайте приложение и создавайте свое виртуальное кафе  с электронным меню, доставкой и возможностью предзаказа
+                ul.app-restaurants__features
+                    +listItem("1740 +", "Скачиваний")
+                    +listItem("12 +", "Ресторанов")
+                    +listItem("ДО 90%", "Cкидки")
+            div.app-restaurants__img-wrap
                 img(class="app-restaurants__img" src="./images/telephones/telephone_3.png" alt="Telephone image")

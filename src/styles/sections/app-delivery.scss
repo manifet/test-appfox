@@ -1,3 +1,4 @@
+@use "../config" as *;
 .app-delivery {
   height: rem(562px);
   position: relative;
@@ -34,13 +35,11 @@
         height: 100%;
         transform: translateY(100%);
         bottom: rem(70px);
-        background: white;
+        background: $mainWhite;
         clip-path: ellipse(105% 100% at 50% 100%);
       }
     }
   }
-
-
 
   &__container {
     flex-direction: row;
@@ -57,13 +56,13 @@
   }
 
   &__heading {
-    font-family: 'Ubuntu', sans-serif;
+    font-family: $headingFont;
     font-style: normal;
     font-weight: 700;
     font-size: rem(32px);
     line-height: 120%;
     text-transform: uppercase;
-    color: white;
+    color: $mainWhite;
     margin-bottom: rem(30px);
     max-width: rem(445px);
 
@@ -76,9 +75,9 @@
     font-family: $mainFont;
     font-style: normal;
     font-weight: 400;
-    font-size: rem(14px);
-    line-height: 150%;
-    color: #FFFFFF;
+    font-size: $mainFontSize;
+    line-height: $mainLineHeight;
+    color: $mainWhite;
     margin-bottom: rem(20px);
     text-align: start;
   }
@@ -86,16 +85,20 @@
   &__img {
     width: 100%;
     object-fit: contain;
+    height: 100%;
+    -webkit-mask-image: -webkit-gradient(linear, left top, left bottom, color-stop(82%, rgba(0, 0, 0, 1.0)), to(transparent));
+    -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1.0) 82%, transparent 100%);
+    mask-image: -webkit-gradient(linear, left top, left bottom, color-stop(82%, rgba(0, 0, 0, 1.0)), to(transparent));
+    mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1.0) 82%, transparent 100%);
 
     &-wrap {
-      flex: 1 0 auto;
+      flex: 1 1 auto;
       margin-right: rem(38px);
       max-width: rem(540px);
-      width: 100%;
-      height: 100%;
       display: flex;
       align-items: center;
       justify-content: center;
+      position: relative;
     }
   }
 }

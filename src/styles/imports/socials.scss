@@ -1,3 +1,4 @@
+@use "../config" as *;
 .socials {
   position: absolute;
   right: rem(27px);
@@ -7,8 +8,14 @@
   z-index: 10000;
 
   &__item {
+    transition: 0.3s;
+
     &:not(:last-child) {
       margin-bottom: rem(14px);
+    }
+
+    &:hover {
+      transform: scale(1.1);
     }
 
     &-link {
@@ -18,7 +25,7 @@
     }
 
     &-icon {
-      fill: white;
+      fill: $mainWhite;
     }
   }
 }

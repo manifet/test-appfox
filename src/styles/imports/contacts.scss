@@ -1,3 +1,5 @@
+@use "../config" as *;
+
 .contacts {
   display: flex;
 
@@ -15,12 +17,13 @@
     font-weight: 700;
     font-size: rem(16px);
     line-height: 170%;
-    color: #FFFFFF;
+    color: $mainWhite;
+    white-space: nowrap;
   }
   &-text{
     margin-left: rem(5px);
   }
   &-icon{
-    fill: white;
+    fill: $mainWhite;
   }
 }

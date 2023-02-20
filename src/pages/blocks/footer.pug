@@ -1,8 +1,14 @@
-footer(class="footer")
-    div(class="footer__container container")
+footer.footer
+    div.footer__container.container
         a(class="footer__icon" href="./")
-        div(class="footer__wrap")
+        div.footer__wrap
             include ../imports/contacts
-            div(class="header__btn-wrap")
-                a(class="header__btn btn" href="./")
+            div.footer__btn-wrap
+                a(class="footer__btn btn" href="./")
+                    svg(class="footer__btn-icon" width="24" height="24" viewBox="0 0 24 24")
+                        use(href="./images/sprites.svg#meeting-room")
                     span Войти
+                a(class="footer__btn footer__btn--partner" href="./")
+                    svg(class="footer__btn-icon" width="24" height="24" viewBox="0 0 24 24")
+                        use(href="./images/sprites.svg#group-add")
+                    span Стать партнером

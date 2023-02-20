@@ -1,14 +1,14 @@
-header(class="header")
-    div(class="header__container container")
+header.header
+    div.header__container.container
         a(class="header__icon" href="")
-        div(class="header__wrap")
+        div.header__wrap
             include ../imports/contacts
-            div(class="header__btn-wrap")
+            div.header__btn-wrap
                 a(class="header__btn btn" href="./")
                     svg(class="header__btn-icon" width="24" height="24" viewBox="0 0 24 24")
-                        use(xlink:href="./images/sprites.svg#meeting-room")
+                        use(href="./images/sprites.svg#meeting-room")
                     span Войти
-                a(class="header__btn btn" href="./")
+                a(class="header__btn" href="./")
                     svg(class="header__btn-icon" width="24" height="24" viewBox="0 0 24 24")
-                        use(xlink:href="./images/sprites.svg#group-add")
+                        use(href="./images/sprites.svg#group-add")
                     span Стать партнером

@@ -1,3 +1,5 @@
+@use "./vars" as *;
+
 // Px to rem
 @function rem($pixels, $context: $mainFontSize) {
   @if (unitless($pixels)) {
@@ -6,7 +8,7 @@
   @if (unitless($context)) {
     $context: $context * 1px;
   }
-  @return $pixels / $context * 1rem;
+  @return calc($pixels / $context * 1rem);
 }
 
 // Mixins

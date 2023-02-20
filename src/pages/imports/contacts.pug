@@ -1,11 +1,9 @@
-ul(class="contacts")
-    li(class="contacts-item")
-        a(class="contacts-link" href="tel:+79770000000")
+mixin listItem(link, name, text)
+    li.contacts-item
+        a(class="contacts-link" href=link)
             svg(class="contacts-icon" width="24" height="24" viewBox="0 0 24 24")
-                use(xlink:href="./images/sprites.svg#phone")
-            span(class="contacts-text") +7 977 000-00-00
-    li(class="contacts-item")
-        a(class="contacts-link" href="mailto:support@mail.ru")
-            svg(class="contacts-icon" width="24" height="24" viewBox="0 0 24 24")
-                use(xlink:href="./images/sprites.svg#mail")
-            span(class="contacts-text") support@mail.ru
+                use(href="./images/sprites.svg#" + name)
+            span.contacts-text !{text}
+ul.contacts
+    +listItem("tel:+79770000000","phone","+7 977 000-00-00")
+    +listItem("mailto:support@mail.ru","mail","support@mail.ru")

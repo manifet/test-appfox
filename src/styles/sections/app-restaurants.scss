@@ -1,9 +1,10 @@
+@use "../config" as *;
 .app-restaurants {
   height: rem(562px);
   position: relative;
 
   &__balls {
-    z-index: 100;
+    z-index: 1000;
     position: absolute;
     width: 100%;
     height: rem(614px);
@@ -43,7 +44,7 @@
     clip-path: ellipse(95% 100% at 50% 0%);
     display: flex;
     align-items: center;
-    z-index: 1000;
+    z-index: 100;
     position: relative;
     height: 100%;
   }
@@ -51,6 +52,7 @@
   &__container {
     flex-direction: row;
     align-items: center;
+    justify-content: space-between;
     height: 100%;
   }
 
@@ -59,16 +61,17 @@
     flex-direction: column;
     align-items: start;
     max-width: rem(540px);
+    margin-right: 2rem;
   }
 
   &__heading {
-    font-family: 'Ubuntu', sans-serif;
+    font-family: $headingFont;
     font-style: normal;
     font-weight: 700;
     font-size: rem(32px);
     line-height: 120%;
     text-transform: uppercase;
-    color: white;
+    color: $mainWhite;
     margin-bottom: rem(20px);
     max-width: rem(445px);
 
@@ -81,9 +84,9 @@
     font-family: $mainFont;
     font-style: normal;
     font-weight: 400;
-    font-size: rem(14px);
-    line-height: 150%;
-    color: #FFFFFF;
+    font-size: $mainFontSize;
+    line-height: $mainLineHeight;
+    color: $mainWhite;
     margin-bottom: rem(20px);
   }
 
@@ -106,7 +109,7 @@
       font-weight: 600;
       font-size: rem(37px);
       line-height: rem(43px);
-      color: #FFFFFF;
+      color: $mainWhite;
       white-space: nowrap;
     }
 
@@ -116,20 +119,18 @@
       font-weight: 400;
       font-size: rem(18px);
       line-height: rem(21px);
-      color: #FFFFFF;
+      color: $mainWhite;
     }
   }
 
   &__img {
     width: 100%;
     object-fit: contain;
+    height: 100%;
 
     &-wrap {
-      flex: 1 0 auto;
-      margin-left: rem(104px);
+      flex: 1 0 auto;;
       max-width: rem(371px);
-      width: 100%;
-      height: 100%;
       display: flex;
       align-items: center;
       justify-content: center;

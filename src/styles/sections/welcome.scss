@@ -1,3 +1,5 @@
+@use "../config" as *;
+
 .welcome {
   &__container {
     position: relative;
@@ -42,12 +44,6 @@
     height: 21.2%;
     filter: blur(5px);
     transform: translate(rem(-10px), rem(10px));
-
-    &-img {
-      width: 100%;
-      height: 100%;
-      object-fit: contain;
-    }
   }
 
   &__img {
@@ -56,11 +52,14 @@
     object-fit: contain;
 
     &-wrap {
+      flex: 1 1 auto;
       margin-bottom: rem(5px);
-      width: rem(288px);
-      height: rem(585px);
+      max-width: rem(288px);
       z-index: 10;
-      filter: drop-shadow(0 rem(4px) rem(60px) rgba(255, 255, 255, 0.5)) drop-shadow(0 rem(0px) rem(140px) white);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      filter: drop-shadow(0 rem(4px) rem(60px) rgba(255, 255, 255, 0.5)) drop-shadow(0 rem(0px) rem(140px) $mainWhite);
     }
   }
 
@@ -76,7 +75,7 @@
     transition: 0.3s;
 
     &-icon {
-      fill: white;
+      fill: $mainWhite;
     }
 
     &:hover {

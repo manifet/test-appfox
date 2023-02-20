@@ -1,3 +1,4 @@
+@use "../config" as *;
 .contact-us {
   padding: rem(174px) 0 rem(120px);
 
@@ -6,7 +7,7 @@
 
   &__form {
     width: 100%;
-    background: #FFFFFF;
+    background: $mainWhite;
     box-shadow: 0 rem(4px) rem(40px) rgba(0, 0, 0, 0.1);
     border-radius: rem(15px);
     display: flex;
@@ -16,7 +17,7 @@
   }
 
   &__heading {
-    font-family: 'Ubuntu', sans-serif;
+    font-family: $headingFont;
     font-style: normal;
     font-weight: 700;
     font-size: rem(32px);
@@ -27,11 +28,11 @@
   }
 
   &__text {
-    font-family: 'Roboto', sans-serif;
+    font-family: $mainFont;
     font-style: normal;
     font-weight: 400;
-    font-size: rem(14px);
-    line-height: 150%;
+    font-size: $mainFontSize;
+    line-height: $mainLineHeight;
     color: #414141;
     margin-bottom: rem(20px);
   }
@@ -82,8 +83,8 @@
     font-family: $mainFont;
     font-style: normal;
     font-weight: 400;
-    font-size: rem(14px);
-    line-height: 150%;
+    font-size: $mainFontSize;
+    line-height: $mainLineHeight;
     color: #565656;
     &-link{
       text-decoration: underline;
@@ -102,10 +103,14 @@
     line-height: rem(19px);
     text-transform: uppercase;
     white-space: nowrap;
-    color: #FFFFFF;
+    color: $mainWhite;
     display: flex;
     align-items: center;
     justify-content: center;
     padding: rem(25px) rem(50px);
+    transition: 0.3s;
+    &:hover{
+      transform: scale(1.05);
+    }
   }
 }

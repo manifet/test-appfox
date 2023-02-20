@@ -1,3 +1,4 @@
+@use "../config" as *;
 .header {
   background: transparent;
   z-index: 10000;
@@ -12,7 +13,7 @@
   &__icon {
     width: rem(42px);
     height: rem(42px);
-    background: white;
+    background: $mainWhite;
     border-radius: 100%;
     display: flex;
   }
@@ -24,17 +25,33 @@
 
 
   &__btn {
-    background: white;
+    background: $mainWhite;
     color: $mainOrange;
+    font-family: $mainFont;
+    font-style: normal;
+    font-weight: 700;
+    font-size: rem(18px);
+    line-height: 170%;
+    border-radius: rem(100px);
+    padding: rem(8px) rem(25px);
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    outline: none;
+    border: none;
+    transition: 0.3s;
+    margin-right: rem(10px);
 
-    &:not(:last-child) {
-      margin-right: rem(10px);
+    &:hover {
+      transform: scale(1.05);
     }
 
     &-wrap {
       margin-left: rem(98px);
       display: flex;
       align-items: center;
+      margin-right: rem(-10px);
     }
 
     &-icon {
