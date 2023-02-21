@@ -1,8 +1,6 @@
 @use "../config" as *;
 .socials {
   position: absolute;
-  right: rem(27px);
-  top: rem(281px);
   display: flex;
   flex-direction: column;
   z-index: 10000;

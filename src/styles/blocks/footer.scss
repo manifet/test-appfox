@@ -24,6 +24,17 @@
   }
 
   &__btn {
+    &-wrap {
+      margin-left: rem(98px);
+      display: flex;
+      align-items: center;
+      margin-right: rem(-10px);
+      @include tables {
+        margin-right: rem(-14px);
+        margin-left: rem(14px);
+      }
+    }
+
     background: $mainWhite;
     color: $mainOrange;
     font-family: $mainFont;
@@ -41,24 +52,46 @@
     border: none;
     transition: 0.3s;
     margin-right: rem(10px);
+    @include tables {
+      padding: 0;
+      background: none;
+      border-radius: unset;
+      margin-right: rem(14px);
+    }
 
     &:hover {
       transform: scale(1.05);
     }
 
-    &--partner {
-      display: none;
-    }
 
-    &-wrap {
-      margin-left: rem(98px);
-      display: flex;
-      align-items: center;
-      margin-right: rem(-10px);
+    &--tables {
+      display: none;
+      @include tables {
+        display: flex;
+        background: $mainWhite;
+        border-radius: rem(100px);
+        padding: rem(8px) rem(25px);
+        & .footer__btn-text {
+          display: flex;
+        }
+        & .footer__btn-icon {
+          display: none;
+        }
+      }
     }
 
     &-icon {
       display: none;
+      @include tables {
+        display: flex;
+        fill: white;
+      }
+    }
+
+    &-text {
+      @include tables {
+        display: none;
+      }
     }
   }
 }

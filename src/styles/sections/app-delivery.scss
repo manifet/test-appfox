@@ -1,7 +1,11 @@
 @use "../config" as *;
+
 .app-delivery {
   height: rem(562px);
   position: relative;
+  @include tables {
+    height: rem(308px);
+  }
 
   &__balls {
     z-index: 100;
@@ -12,6 +16,9 @@
     background-repeat: no-repeat;
     background-position: 75% center;
     background-size: contain;
+    @include tables {
+      display: none;
+    }
   }
 
   &__background {
@@ -21,6 +28,9 @@
     background: radial-gradient(95.07% 139.28% at 50% -43.54%, #FFAB00 0%, #FFCD68 29.64%, #FFAB00 85.3%, #FFAB00 100%);
     clip-path: ellipse(95% 100% at 50% 100%);
     z-index: 10;
+    @include tables {
+      clip-path: ellipse(150% 100% at 50% 100%);
+    }
 
     &-mask {
       position: absolute;
@@ -34,9 +44,13 @@
         width: 100%;
         height: 100%;
         transform: translateY(100%);
-        bottom: rem(70px);
+        bottom: rem(100px);
         background: $mainWhite;
-        clip-path: ellipse(105% 100% at 50% 100%);
+        clip-path: ellipse(110% 100% at 50% 100%);
+        @include tables {
+          bottom: rem(50px);
+          clip-path: ellipse(150% 90% at 50% 100%);
+        }
       }
     }
   }
@@ -65,6 +79,10 @@
     color: $mainWhite;
     margin-bottom: rem(30px);
     max-width: rem(445px);
+    @include tables {
+      font-size: rem(16px);
+      margin-bottom: rem(15px);
+    }
 
     &--orange {
       color: $textOrange;
@@ -92,13 +110,15 @@
     mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1.0) 82%, transparent 100%);
 
     &-wrap {
-      flex: 1 1 auto;
+      flex: 0 1 rem(540px);
       margin-right: rem(38px);
-      max-width: rem(540px);
       display: flex;
       align-items: center;
       justify-content: center;
       position: relative;
+      @include tables{
+        flex: 0 0 rem(160px);
+      }
     }
   }
 }

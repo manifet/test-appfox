@@ -3,13 +3,16 @@
 .contacts {
   display: flex;
 
-  &-item {
+  &__item {
     &:not(:last-child) {
       margin-right: rem(30px);
+      @include tables{
+        margin-right: rem(14px);
+      }
     }
   }
 
-  &-link {
+  &__link {
     display: flex;
     align-items: center;
     font-family: $mainFont;
@@ -20,10 +23,13 @@
     color: $mainWhite;
     white-space: nowrap;
   }
-  &-text{
+  &__text{
     margin-left: rem(5px);
+    @include tables{
+      display: none;
+    }
   }
-  &-icon{
+  &__icon{
     fill: $mainWhite;
   }
 }

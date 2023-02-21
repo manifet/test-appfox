@@ -4,11 +4,11 @@ header.header
         div.header__wrap
             include ../imports/contacts
             div.header__btn-wrap
-                a(class="header__btn btn" href="./")
-                    svg(class="header__btn-icon" width="24" height="24" viewBox="0 0 24 24")
-                        use(href="./images/sprites.svg#meeting-room")
-                    span Войти
                 a(class="header__btn" href="./")
                     svg(class="header__btn-icon" width="24" height="24" viewBox="0 0 24 24")
+                        use(href="./images/sprites.svg#meeting-room")
+                    span.header__btn-text Войти
+                a(class="header__btn header__btn--tables" href="./")
+                    svg(class="header__btn-icon" width="24" height="24" viewBox="0 0 24 24")
                         use(href="./images/sprites.svg#group-add")
-                    span Стать партнером
+                    span.header__btn-text Стать партнером

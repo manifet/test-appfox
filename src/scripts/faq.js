@@ -1,14 +1,17 @@
+const faqItemHeads = document.querySelectorAll(".faq__item-wrap")
 const faqItems = document.querySelectorAll(".faq__item")
-faqItems.forEach((item) => {
+
+faqItemHeads.forEach((item, index) => {
     item.addEventListener("click", () => {
-        const hasActive = item.classList.contains("active")
+        const currentItem = faqItems[index]
+        const hasActive = currentItem.classList.contains("active")
 
         faqItems.forEach((item) => {
             item.classList.remove("active")
         })
 
         if (!hasActive) {
-            item.classList.add("active")
+            currentItem.classList.add("active")
         }
     })
 })

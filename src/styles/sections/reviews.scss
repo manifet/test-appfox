@@ -3,7 +3,9 @@
 .reviews {
   height: rem(562px);
   position: relative;
-
+  @include tables {
+    height: rem(408px);
+  }
   &__balls {
     z-index: 100;
     position: absolute;
@@ -13,6 +15,9 @@
     background-repeat: no-repeat;
     background-position: right center;
     background-size: contain;
+    @include tables {
+      display: none;
+    }
   }
 
   &__background {
@@ -22,7 +27,9 @@
     background: radial-gradient(95.07% 139.28% at 50% -43.54%, #513E63 0%, #282837 29.64%, #4D4793 85.3%, #9260A9 100%);
     clip-path: ellipse(95% 100% at 50% 100%);
     z-index: 10;
-
+    @include tables {
+      clip-path: ellipse(150% 100% at 50% 100%);
+    }
     &-img {
       width: 100%;
       height: 100%;
@@ -47,9 +54,13 @@
         width: 100%;
         height: 100%;
         transform: translateY(100%);
-        bottom: rem(70px);
+        bottom: rem(100px);
         background: white;
-        clip-path: ellipse(105% 100% at 50% 100%);
+        clip-path: ellipse(110% 100% at 50% 100%);
+        @include tables {
+          bottom: rem(62px);
+          clip-path: ellipse(150% 90% at 50% 100%);
+        }
       }
     }
   }
@@ -66,7 +77,10 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    max-width: rem(445px);
+    flex: 0 1 rem(445px);
+    @include tables{
+      flex: 1 0 100%;
+    }
   }
 
   &__heading {
@@ -79,7 +93,11 @@
     color: #FFFFFF;
     margin-bottom: rem(30px);
     max-width: rem(445px);
-
+    @include tables {
+      font-size: rem(16px);
+      margin-bottom: rem(28px);
+      max-width: none;
+    }
     &--orange {
       color: $textOrange;
     }
@@ -102,14 +120,16 @@
     height: 100%;
 
     &-wrap {
-      flex: 1 1 auto;
+      flex: 0 1 rem(479px);
       margin-right: rem(65px);
-      max-width: rem(479px);
       width: 100%;
       height: 100%;
       display: flex;
       align-items: center;
       justify-content: center;
+      @include tables{
+        display: none;
+      }
     }
   }
 
@@ -133,6 +153,9 @@
       line-height: $mainLineHeight;
       color: $mainWhite;
       margin-bottom: rem(10px);
+      @include tables{
+        font-size: $mainFontSize;
+      }
     }
 
     &-author {

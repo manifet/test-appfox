@@ -1,4 +1,5 @@
 @use "./vars" as *;
+@use "./mixins" as *;
 
 html {
   font-size: $mainFontSize;
@@ -72,4 +73,7 @@ section {
   max-width: $desktopWidth;
   display: flex;
   flex-direction: column;
+  @include tables{
+    max-width: $tableWidth;
+  }
 }
