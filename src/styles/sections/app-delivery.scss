@@ -116,7 +116,7 @@
       align-items: center;
       justify-content: center;
       position: relative;
-      @include tables{
+      @include tables {
         flex: 0 0 rem(160px);
       }
     }

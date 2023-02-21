@@ -10,11 +10,13 @@
   &__balls {
     z-index: 1000;
     position: absolute;
-    width: 102%;
+    width: 100%;
     height: rem(614px);
     background-image: url("./images/backgrounds/balls_app-restaurants.png");
     background-repeat: no-repeat;
     background-position: center center;
+    top: 0;
+    left: 0;
     @include tables {
       display: none;
     }

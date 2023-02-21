@@ -2,7 +2,7 @@
 
 .app-platform {
   padding: rem(120px) 0 rem(62px);
-  @include tables{
+  @include tables {
     padding: rem(43px) 0 rem(5px);
   }
 
@@ -10,7 +10,7 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    @include tables{
+    @include tables {
       flex-direction: column;
     }
   }
@@ -21,7 +21,7 @@
     align-items: flex-start;
     margin-right: 2rem;
     flex: 1 0 rem(445px);
-    @include tables{
+    @include tables {
       flex: 1 1 auto;
       margin-right: 0;
     }
@@ -37,10 +37,11 @@
     color: $mainBlack;
     max-width: rem(370px);
     margin-bottom: rem(30px);
-@include tables{
-  font-size: rem(16px);
-  margin-bottom: rem(15px);
-}
+    @include tables {
+      font-size: rem(16px);
+      margin-bottom: rem(15px);
+    }
+
     &--orange {
       color: $textOrange;
     }
