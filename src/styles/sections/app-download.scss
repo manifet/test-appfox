@@ -1,4 +1,5 @@
 @use "../config" as *;
+
 .app-download {
   &__container {
     flex-direction: row;
@@ -27,7 +28,7 @@
   &__wrap {
     display: flex;
     flex-direction: column;
-    align-items: start;
+    align-items: flex-start;
     max-width: rem(628px);
 
   }

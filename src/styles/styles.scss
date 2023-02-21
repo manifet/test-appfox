@@ -1,4 +1,6 @@
-@use "config";
+@use "config/libs";
+@use "config/main";
+
 @use "imports";
 @use "blocks";
 @use "sections";
