@@ -11,7 +11,7 @@ body {
   padding: 0;
   font-family: $mainFont;
   font-size: $mainLineHeight;
-  font-weight: 400;
+  font-weight: $mainFontWeight;
   color: black;
   line-height: $mainLineHeight;
   -webkit-font-smoothing: antialiased;
@@ -19,6 +19,7 @@ body {
   scroll-behavior: smooth;
   width: 100%;
   height: 100%;
+  background: $mainWhite;
 }
 
 *,
@@ -74,10 +75,10 @@ section {
   max-width: $desktopWidth;
   display: flex;
   flex-direction: column;
-  @include tables{
+  @include tables {
     max-width: $tableWidth;
   }
-  @include phones{
+  @include phones {
     max-width: $phonesWidth;
   }
 }

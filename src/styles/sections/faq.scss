@@ -95,8 +95,8 @@
     &-answer {
       font-family: $mainFont;
       font-style: normal;
-      font-weight: 400;
-      font-size: $mainFontSize;
+      font-weight: $mainFontWeight;
+      font-size: rem($mainFontSize);
       line-height: 175%;
       color: $textGray;
       visibility: hidden;

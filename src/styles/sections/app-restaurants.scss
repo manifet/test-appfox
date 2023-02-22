@@ -102,7 +102,7 @@
     @include tables {
       flex: 0 1 rem(350px);
     }
-    @include phones{
+    @include phones {
       margin-right: 0;
       flex: 1 1 auto;
       order: 2;
@@ -123,10 +123,11 @@
       font-size: rem(16px);
       margin-bottom: rem(15px);
     }
-@include phones{
-  font-size: rem(13px);
-  margin-bottom: rem(10px);
-}
+    @include phones {
+      font-size: rem(13px);
+      margin-bottom: rem(10px);
+    }
+
     &--orange {
       color: $textOrange;
     }
@@ -135,15 +136,15 @@
   &__text {
     font-family: $mainFont;
     font-style: normal;
-    font-weight: 400;
-    font-size: $mainFontSize;
+    font-weight: $mainFontWeight;
+    font-size: rem($mainFontSize);
     line-height: $mainLineHeight;
     color: $mainWhite;
     margin-bottom: rem(20px);
     @include tables {
       margin-bottom: rem(15px);
     }
-    @include phones{
+    @include phones {
       font-size: rem(13px);
       margin-bottom: rem(10px);
     }
@@ -164,7 +165,8 @@
       &:not(:last-child) {
         margin-right: 1rem;
       }
-      @include phones{
+
+      @include phones {
         margin: 0;
       }
     }
@@ -181,7 +183,7 @@
         font-size: rem(16px);
         line-height: rem(19px);
       }
-      @include phones{
+      @include phones {
         font-size: rem(13px);
       }
     }
@@ -189,15 +191,15 @@
     &-title {
       font-family: $mainFont;
       font-style: normal;
-      font-weight: 400;
+      font-weight: $mainFontWeight;
       font-size: rem(18px);
       line-height: rem(21px);
       color: $mainWhite;
       @include tables {
-        font-size: rem(14px);
+        font-size: rem($mainFontSize);
         line-height: rem(16px);
       }
-      @include phones{
+      @include phones {
         font-size: rem(13px);
       }
     }
@@ -235,11 +237,11 @@
       @include tables {
         flex: 0 1 rem(160px);
       }
-@include phones{
-  order: 1;
-  margin-bottom: rem(10px);
-  margin-top: rem(-174px);
-}
+      @include phones {
+        order: 1;
+        margin-bottom: rem(10px);
+        margin-top: rem(-174px);
+      }
     }
   }
 }

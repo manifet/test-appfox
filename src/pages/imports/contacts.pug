@@ -4,6 +4,7 @@ mixin listItem(link, name, text)
             svg(class="contacts__icon" width="24" height="24" viewBox="0 0 24 24")
                 use(href="./images/sprites.svg#" + name)
             span.contacts__text !{text}
+
 ul.contacts
     +listItem("tel:+79770000000","phone","+7 977 000-00-00")
     +listItem("mailto:support@mail.ru","mail","support@mail.ru")

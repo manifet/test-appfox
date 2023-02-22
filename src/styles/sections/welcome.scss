@@ -1,8 +1,9 @@
 @use "../config" as *;
 
 .welcome {
-padding-top: rem(70px);
+  padding-top: rem(70px);
   position: relative;
+
   &__container {
     position: relative;
     align-items: center;
@@ -27,7 +28,7 @@ padding-top: rem(70px);
       height: rem(380px);
       clip-path: ellipse(165% 100% at 50% 0%);
     }
-    @include phones{
+    @include phones {
       height: 100%;
       clip-path: none;
     }
@@ -47,7 +48,7 @@ padding-top: rem(70px);
       background-position: center top;
       z-index: 10;
     }
-    @include phones{
+    @include phones {
       display: none;
     }
   }
@@ -69,7 +70,7 @@ padding-top: rem(70px);
       right: 19.8%;
       bottom: 18.1%;
     }
-    @include phones{
+    @include phones {
       display: none;
     }
   }
@@ -130,7 +131,8 @@ padding-top: rem(70px);
     @include tables {
       top: rem(162px);
     }
-    @include phones{}
+    @include phones {
+    }
     top: rem(101px);
   }
 }

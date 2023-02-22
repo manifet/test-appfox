@@ -5,14 +5,15 @@
   @include tables {
     padding: rem(26px) 0 rem(30px);
   }
-@include phones{
-  padding: rem(30px) 0 rem(181px);
-}
+  @include phones {
+    padding: rem(30px) 0 rem(181px);
+  }
+
   &__container {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    @include phones{
+    @include phones {
       justify-content: center;
     }
   }
@@ -25,8 +26,9 @@
     -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1.0) 62%, transparent 100%);
     mask-image: -webkit-gradient(linear, left top, left bottom, color-stop(62%, rgba(0, 0, 0, 1.0)), to(transparent));
     mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1.0) 62%, transparent 100%);
+
     &-wrap {
-      flex: 0 0 rem(343px);
+      flex: 0 1 rem(343px);
       margin-right: 2rem;
       display: flex;
       align-items: center;
@@ -36,7 +38,7 @@
       @include tables {
         flex: 1 0 rem(160px);
       }
-      @include phones{
+      @include phones {
         display: none;
       }
     }
@@ -50,7 +52,7 @@
     @include tables {
       flex: 0 1 rem(350px);
     }
-    @include phones{
+    @include phones {
       flex: 1 1 auto;
     }
   }
@@ -77,14 +79,14 @@
   &__text {
     font-family: $mainFont;
     font-style: normal;
-    font-weight: 400;
+    font-weight: $mainFontWeight;
     font-size: rem(18px);
     line-height: $mainLineHeight;
     color: #768C9B;
     margin-bottom: rem(73px);
     @include tables {
       margin-bottom: rem(10px);
-      font-size: rem(14px);
+      font-size: rem($mainFontSize);
     }
   }
 
@@ -97,6 +99,7 @@
     @include tables {
       flex: 0 1 rem(117px);
     }
+
     &:hover {
       transform: scale(1.1);
     }

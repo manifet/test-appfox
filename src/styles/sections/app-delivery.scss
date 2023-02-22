@@ -6,10 +6,11 @@
   @include tables {
     height: rem(308px);
   }
-@include phones{
-  height: auto;
-  padding: rem(20px) 0;
-}
+  @include phones {
+    height: auto;
+    padding: rem(20px) 0;
+  }
+
   &__balls {
     z-index: 100;
     position: absolute;
@@ -35,7 +36,7 @@
     @include tables {
       clip-path: ellipse(150% 100% at 50% 100%);
     }
-    @include phones{
+    @include phones {
       clip-path: none;
     }
 
@@ -78,7 +79,7 @@
     flex-direction: column;
     align-items: flex-start;
     flex: 0 1 rem(515px);
-    @include phones{
+    @include phones {
       flex: 1 1 auto;
     }
   }
@@ -97,11 +98,12 @@
       font-size: rem(16px);
       margin-bottom: rem(15px);
     }
-@include phones{
-  margin-bottom: rem(10px);
-  font-size: rem(13px);
-  max-width: rem(100px);
-}
+    @include phones {
+      margin-bottom: rem(10px);
+      font-size: rem(13px);
+      max-width: rem(100px);
+    }
+
     &--orange {
       color: $textOrange;
     }
@@ -110,12 +112,12 @@
   &__text {
     font-family: $mainFont;
     font-style: normal;
-    font-weight: 400;
-    font-size: $mainFontSize;
+    font-weight: $mainFontWeight;
+    font-size: rem($mainFontSize);
     line-height: $mainLineHeight;
     color: $mainWhite;
     text-align: start;
-    @include phones{
+    @include phones {
       font-size: rem(13px);
     }
   }
@@ -128,9 +130,10 @@
     -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1.0) 82%, transparent 100%);
     mask-image: -webkit-gradient(linear, left top, left bottom, color-stop(82%, rgba(0, 0, 0, 1.0)), to(transparent));
     mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1.0) 82%, transparent 100%);
-@include phones{
-  position: unset;
-}
+    @include phones {
+      position: unset;
+    }
+
     &-wrap {
       flex: 0 1 rem(540px);
       margin-right: rem(38px);
@@ -141,7 +144,7 @@
       @include tables {
         flex: 0 0 rem(160px);
       }
-      @include phones{
+      @include phones {
         position: absolute;
         margin-right: 0;
         width: rem(126px);

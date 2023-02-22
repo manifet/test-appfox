@@ -123,13 +123,13 @@
   &__text {
     font-family: $mainFont;
     font-style: normal;
-    font-weight: 400;
+    font-weight: $mainFontWeight;
     font-size: $mainFontSize;
     line-height: $mainLineHeight;
     color: $mainWhite;
     margin-bottom: rem(20px);
     text-align: start;
-    @include phones{
+    @include phones {
       margin-bottom: rem(10px);
     }
   }
@@ -161,7 +161,7 @@
       &-wrap {
         height: 17px;
         margin-bottom: rem(20px);
-        @include phones{
+        @include phones {
           margin-bottom: rem(10px);
         }
       }
@@ -170,13 +170,13 @@
     &-text {
       font-family: 'Times New Roman', serif;
       font-style: italic;
-      font-weight: 400;
+      font-weight: $mainFontWeight;
       font-size: rem(16px);
       line-height: $mainLineHeight;
       color: $mainWhite;
       margin-bottom: rem(10px);
       @include tables {
-        font-size: $mainFontSize;
+        font-size: rem($mainFontSize);
       }
     }
 
@@ -184,7 +184,7 @@
       font-family: $mainFont;
       font-style: normal;
       font-weight: 700;
-      font-size: $mainFontSize;
+      font-size: rem($mainFontSize);
       line-height: $mainLineHeight;
       text-align: right;
       color: $mainWhite;
