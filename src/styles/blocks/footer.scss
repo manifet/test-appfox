@@ -21,6 +21,9 @@
   &__wrap {
     display: flex;
     align-items: center;
+    @include phones {
+      flex: 1 1 auto;
+    }
   }
 
   &__btn {
@@ -32,6 +35,11 @@
       @include tables {
         margin-right: rem(-14px);
         margin-left: rem(14px);
+      }
+      @include phones {
+        margin: 0;
+        justify-content: space-around;
+        flex: 1 1 auto;
       }
     }
 
@@ -58,6 +66,9 @@
       border-radius: unset;
       margin-right: rem(14px);
     }
+    @include phones {
+      margin-right: 0;
+    }
 
     &:hover {
       transform: scale(1.05);
@@ -66,17 +77,36 @@
 
     &--tables {
       display: none;
+
+      & .footer__btn-text {
+        @include tables {
+          display: flex;
+        }
+        @include phones {
+          display: none;
+        }
+      }
+
+      & .footer__btn-icon {
+        @include tables {
+          display: none;
+        }
+        @include phones {
+          fill: $mainWhite;
+          display: flex;
+        }
+      }
+
       @include tables {
         display: flex;
         background: $mainWhite;
         border-radius: rem(100px);
         padding: rem(8px) rem(25px);
-        & .footer__btn-text {
-          display: flex;
-        }
-        & .footer__btn-icon {
-          display: none;
-        }
+      }
+      @include phones {
+        padding: 0;
+        background: none;
+        border-radius: unset;
       }
     }
 

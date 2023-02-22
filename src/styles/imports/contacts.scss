@@ -2,12 +2,18 @@
 
 .contacts {
   display: flex;
-
+@include phones{
+  justify-content: space-around;
+  flex: 1 1 auto;
+}
   &__item {
     &:not(:last-child) {
       margin-right: rem(30px);
       @include tables{
         margin-right: rem(14px);
+      }
+      @include phones{
+        margin: 0;
       }
     }
   }

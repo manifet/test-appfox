@@ -3,6 +3,10 @@
 .header {
   background: transparent;
   z-index: 10000;
+  position: absolute;
+  right: 0;
+  left: 0;
+  top: 0;
 
   &__container {
     flex-direction: row;
@@ -22,11 +26,13 @@
   &__wrap {
     display: flex;
     align-items: center;
+    @include phones {
+      flex: 1 1 auto;
+    }
   }
 
 
   &__btn {
-
     &-wrap {
       margin-left: rem(98px);
       display: flex;
@@ -35,6 +41,11 @@
       @include tables {
         margin-right: rem(-14px);
         margin-left: rem(14px);
+      }
+      @include phones {
+        margin: 0;
+        justify-content: space-around;
+        flex: 1 1 auto;
       }
     }
 
@@ -61,6 +72,9 @@
       border-radius: unset;
       margin-right: rem(14px);
     }
+    @include phones {
+      margin-right: 0;
+    }
 
     &:hover {
       transform: scale(1.05);
@@ -68,17 +82,35 @@
 
     &--tables {
       display: none;
+
+      & .header__btn-text {
+        @include tables {
+          display: flex;
+        }
+        @include phones {
+          display: none;
+        }
+      }
+
+      & .header__btn-icon {
+        @include tables {
+          fill: $mainOrange;
+        }
+        @include phones {
+          fill: $mainWhite;
+        }
+      }
+
       @include tables {
         display: flex;
         background: $mainWhite;
         border-radius: rem(100px);
         padding: rem(8px) rem(25px);
-        & .header__btn-text {
-          display: flex;
-        }
-        & .header__btn-icon {
-          fill: $mainOrange;
-        }
+      }
+      @include phones {
+        padding: 0;
+        background: none;
+        border-radius: unset;
       }
     }
 

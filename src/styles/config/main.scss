@@ -64,6 +64,7 @@ section {
   height: 100%;
   background: white;
   min-height: 100vh;
+  position: relative;
 }
 
 .container {
@@ -75,5 +76,8 @@ section {
   flex-direction: column;
   @include tables{
     max-width: $tableWidth;
+  }
+  @include phones{
+    max-width: $phonesWidth;
   }
 }

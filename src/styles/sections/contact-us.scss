@@ -6,7 +6,9 @@
   @include tables {
     padding: 0 0 rem(50px);
   }
-
+@include phones{
+  padding: rem(26px) 0;
+}
   &__container {
   }
 
@@ -23,6 +25,12 @@
       margin-top: rem(-50px);
       padding: rem(18px) rem(30px);
     }
+    @include phones{
+      margin: 0;
+      padding: 0;
+      box-shadow: none;
+      border-radius: 0;
+    }
   }
 
   &__heading {
@@ -38,6 +46,9 @@
       margin-bottom: rem(15px);
       font-size: rem(16px);
     }
+    @include phones{
+      font-size: rem(13px);
+    }
   }
 
   &__text {
@@ -50,6 +61,9 @@
     margin-bottom: rem(20px);
     @include tables {
       margin-bottom: rem(15px);
+    }
+    @include phones{
+      font-size: rem(13px);
     }
   }
 

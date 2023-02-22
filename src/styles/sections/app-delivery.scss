@@ -6,7 +6,10 @@
   @include tables {
     height: rem(308px);
   }
-
+@include phones{
+  height: auto;
+  padding: rem(20px) 0;
+}
   &__balls {
     z-index: 100;
     position: absolute;
@@ -28,8 +31,12 @@
     background: radial-gradient(95.07% 139.28% at 50% -43.54%, #FFAB00 0%, #FFCD68 29.64%, #FFAB00 85.3%, #FFAB00 100%);
     clip-path: ellipse(95% 100% at 50% 100%);
     z-index: 10;
+    top: 0;
     @include tables {
       clip-path: ellipse(150% 100% at 50% 100%);
+    }
+    @include phones{
+      clip-path: none;
     }
 
     &-mask {
@@ -37,6 +44,9 @@
       width: 100%;
       height: 100%;
       overflow: hidden;
+      @include phones {
+        display: none;
+      }
 
       &:after {
         position: absolute;
@@ -46,7 +56,7 @@
         transform: translateY(100%);
         bottom: rem(100px);
         background: $mainWhite;
-        clip-path: ellipse(110% 100% at 50% 100%);
+        clip-path: ellipse(88% 100% at 50% 100%);
         @include tables {
           bottom: rem(50px);
           clip-path: ellipse(150% 90% at 50% 100%);
@@ -60,13 +70,17 @@
     align-items: center;
     height: 100%;
     z-index: 1000;
+    position: relative;
   }
 
   &__wrap {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    max-width: rem(515px);
+    flex: 0 1 rem(515px);
+    @include phones{
+      flex: 1 1 auto;
+    }
   }
 
   &__heading {
@@ -83,7 +97,11 @@
       font-size: rem(16px);
       margin-bottom: rem(15px);
     }
-
+@include phones{
+  margin-bottom: rem(10px);
+  font-size: rem(13px);
+  max-width: rem(100px);
+}
     &--orange {
       color: $textOrange;
     }
@@ -96,19 +114,23 @@
     font-size: $mainFontSize;
     line-height: $mainLineHeight;
     color: $mainWhite;
-    margin-bottom: rem(20px);
     text-align: start;
+    @include phones{
+      font-size: rem(13px);
+    }
   }
 
   &__img {
     width: 100%;
     object-fit: contain;
-    height: 100%;
+    position: absolute;
     -webkit-mask-image: -webkit-gradient(linear, left top, left bottom, color-stop(82%, rgba(0, 0, 0, 1.0)), to(transparent));
     -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1.0) 82%, transparent 100%);
     mask-image: -webkit-gradient(linear, left top, left bottom, color-stop(82%, rgba(0, 0, 0, 1.0)), to(transparent));
     mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1.0) 82%, transparent 100%);
-
+@include phones{
+  position: unset;
+}
     &-wrap {
       flex: 0 1 rem(540px);
       margin-right: rem(38px);
@@ -118,6 +140,13 @@
       position: relative;
       @include tables {
         flex: 0 0 rem(160px);
+      }
+      @include phones{
+        position: absolute;
+        margin-right: 0;
+        width: rem(126px);
+        top: rem(-130px);
+        right: 0px;
       }
     }
   }

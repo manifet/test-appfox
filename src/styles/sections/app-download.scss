@@ -5,11 +5,16 @@
   @include tables {
     padding: rem(26px) 0 rem(30px);
   }
-
+@include phones{
+  padding: rem(30px) 0 rem(181px);
+}
   &__container {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+    @include phones{
+      justify-content: center;
+    }
   }
 
   &__img {
@@ -31,6 +36,9 @@
       @include tables {
         flex: 1 0 rem(160px);
       }
+      @include phones{
+        display: none;
+      }
     }
   }
 
@@ -41,6 +49,9 @@
     flex: 0 1 rem(628px);
     @include tables {
       flex: 0 1 rem(350px);
+    }
+    @include phones{
+      flex: 1 1 auto;
     }
   }
 
@@ -81,12 +92,11 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    flex: 1 1 rem(215px);
+    flex: 0 1 rem(215px);
     transition: 0.3s;
     @include tables {
-      flex: 1 1 rem(117px);
+      flex: 0 1 rem(117px);
     }
-
     &:hover {
       transform: scale(1.1);
     }

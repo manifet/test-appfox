@@ -1,6 +1,8 @@
 @use "../config" as *;
 
 .welcome {
+padding-top: rem(70px);
+  position: relative;
   &__container {
     position: relative;
     align-items: center;
@@ -25,6 +27,10 @@
       height: rem(380px);
       clip-path: ellipse(165% 100% at 50% 0%);
     }
+    @include phones{
+      height: 100%;
+      clip-path: none;
+    }
   }
 
   &__balls {
@@ -40,6 +46,9 @@
     @include tables {
       background-position: center top;
       z-index: 10;
+    }
+    @include phones{
+      display: none;
     }
   }
 
@@ -60,18 +69,20 @@
       right: 19.8%;
       bottom: 18.1%;
     }
+    @include phones{
+      display: none;
+    }
   }
 
   &__img {
     width: 100%;
     object-fit: contain;
-    filter: drop-shadow(0 rem(4px) rem(60px) rgba(255, 255, 255, 0.5)) drop-shadow(0 rem(0px) rem(140px) $mainWhite);
+
     @include tables {
       -webkit-mask-image: -webkit-gradient(linear, left top, left bottom, color-stop(82%, rgba(0, 0, 0, 1.0)), to(transparent));
       -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1.0) 82%, transparent 100%);
       mask-image: -webkit-gradient(linear, left top, left bottom, color-stop(82%, rgba(0, 0, 0, 1.0)), to(transparent));
       mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1.0) 82%, transparent 100%);
-      filter: none;
     }
 
     &-wrap {
@@ -81,6 +92,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
+      filter: drop-shadow(0 rem(4px) rem(60px) rgba(255, 255, 255, 0.5)) drop-shadow(0 rem(0px) rem(140px) $mainWhite);
       @include tables {
         max-width: rem(130px);
         z-index: 1;
@@ -118,5 +130,7 @@
     @include tables {
       top: rem(162px);
     }
+    @include phones{}
+    top: rem(101px);
   }
 }

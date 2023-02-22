@@ -6,6 +6,9 @@
   @include tables {
     padding: rem(40px) 0 rem(30px);
   }
+  @include phones {
+    padding: rem(30px) 0;
+  }
 
   &__container {
     flex-direction: row;
@@ -38,6 +41,9 @@
     @include tables {
       font-size: rem(16px);
     }
+    @include phones {
+      margin-bottom: rem(10px);
+    }
 
     &--orange {
       color: $textOrange;
@@ -69,6 +75,9 @@
       cursor: pointer;
       align-items: center;
       padding: rem(5px) rem(16px) rem(5px) rem(10px);
+      @include phones {
+        padding: rem(5px) rem(12px) rem(5px) rem(10px);
+      }
     }
 
     &-title {
@@ -78,10 +87,12 @@
       font-size: rem(16px);
       line-height: 170%;
       color: $textGray;
+      @include phones {
+        font-size: rem(13px);
+      }
     }
 
     &-answer {
-      margin-top: rem(10px);
       font-family: $mainFont;
       font-style: normal;
       font-weight: 400;
@@ -91,13 +102,21 @@
       visibility: hidden;
       opacity: 0;
       height: 0;
-      padding: 0 rem(10px);
+      padding-left: rem(10px);
+
+      @include phones {
+        font-size: rem(13px);
+      }
 
       .active & {
-        transition: 1s;
+        padding-top: rem(10px);
+        transition: 0.3s;
         height: auto;
         visibility: visible;
         opacity: 1;
+        @include phones {
+          padding-top: rem(5px);
+        }
       }
     }
 
