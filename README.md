@@ -6,6 +6,7 @@ This is a project creating a landing page using HTML, CSS and JavaScript technol
 You can see the finished project [here](https://manifet.github.io/test-appfox/)
 
 ![Welcome section](https://user-images.githubusercontent.com/61707913/220665463-d4e90048-bd94-4e4b-84b7-07bfd92759d0.png)
+![Favorite restaurants section](https://user-images.githubusercontent.com/61707913/220669430-3a138fa9-d759-43c2-9ea8-21f4750b2522.png)
 ![Last sections](https://user-images.githubusercontent.com/61707913/220665322-c528b7d5-4925-40ba-bc08-9b1c16e5f1cf.png)
 
 ## Getting Started
